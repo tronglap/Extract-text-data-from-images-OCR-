@@ -1,0 +1,15 @@
+digraph {
+	A [label="Input Image"]
+	B [label=Preprocessing]
+	C [label="Encoder (Vision Transformer)"]
+	D [label="Decoder (Text Transformer)"]
+	E [label=Postprocessing]
+	F [label="Output Text"]
+	A -> B [label="Image file (e.g., JPEG, PNG)"]
+	B -> C [label="Resize, Normalize, Augmentations"]
+	C -> D [label="DeiT: Patch Embeddings, Self-Attention
+Creates feature vectors"]
+	D -> E [label="TrOCR: Self-Attention, Encoder-Decoder Attention
+Generates text tokens"]
+	E -> F [label="Remove special tokens, Format text"]
+}

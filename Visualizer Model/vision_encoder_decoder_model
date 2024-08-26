@@ -1,0 +1,75 @@
+// VisionEncoderDecoderModel
+digraph {
+	E [label=Encoder]
+	E1 [label=DeiTModel]
+	E2 [label=DeiTEmbeddings]
+	E3 [label=DeiTPatchEmbeddings]
+	E4 [label=Conv2d]
+	E5 [label=DeiTEncoder]
+	E6 [label="DeiTLayer x12"]
+	E7 [label=DeiTAttention]
+	E8 [label=DeiTSelfAttention]
+	E9 [label="Linear (query/key/value)"]
+	E10 [label=DeiTSelfOutput]
+	E11 [label="Linear (dense)"]
+	E12 [label=DeiTIntermediate]
+	E13 [label=GELUActivation]
+	E14 [label=DeiTOutput]
+	E15 [label=LayerNorm]
+	E16 [label=DeiTPooler]
+	E17 [label=Linear]
+	E18 [label=Tanh]
+	E -> E1
+	E1 -> E2
+	E2 -> E3
+	E3 -> E4
+	E4 -> E5
+	E5 -> E6
+	E6 -> E7
+	E7 -> E8
+	E8 -> E9
+	E7 -> E10
+	E10 -> E11
+	E5 -> E12
+	E12 -> E13
+	E6 -> E14
+	E14 -> E11
+	E6 -> E15
+	E6 -> E16
+	E16 -> E17
+	E17 -> E18
+	D [label=Decoder]
+	D1 [label=TrOCRForCausalLM]
+	D2 [label=TrOCRDecoderWrapper]
+	D3 [label=TrOCRDecoder]
+	D4 [label=TrOCRScaledWordEmbedding]
+	D5 [label=TrOCRLearnedPositionalEmbedding]
+	D6 [label=LayerNorm]
+	D7 [label="TrOCRDecoderLayer x6"]
+	D8 [label=TrOCRAttention]
+	D9 [label="Linear (k/q/v_proj)"]
+	D10 [label="TrOCRAttention (encoder)"]
+	D11 [label="Linear (k/q_proj)"]
+	D12 [label="Linear (v_proj)"]
+	D13 [label=ReLU]
+	D14 [label="Linear (fc1)"]
+	D15 [label="Linear (fc2)"]
+	D16 [label="Linear (output)"]
+	D -> D1
+	D1 -> D2
+	D2 -> D3
+	D3 -> D4
+	D3 -> D5
+	D3 -> D6
+	D3 -> D7
+	D7 -> D8
+	D8 -> D9
+	D8 -> D10
+	D10 -> D11
+	D10 -> D12
+	D10 -> D13
+	D7 -> D14
+	D14 -> D15
+	D7 -> D16
+	E -> D
+}

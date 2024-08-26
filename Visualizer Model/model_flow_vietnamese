@@ -1,0 +1,15 @@
+digraph {
+	A [label="Ảnh đầu vào"]
+	B [label="Tiền xử lý"]
+	C [label="Bộ mã hóa (Vision Transformer)"]
+	D [label="Bộ giải mã (Text Transformer)"]
+	E [label="Hậu xử lý"]
+	F [label="Văn bản đầu ra"]
+	A -> B [label="Tệp ảnh (ví dụ: JPEG, PNG)"]
+	B -> C [label="Thay đổi kích thước, Chuẩn hóa, Tăng cường"]
+	C -> D [label="DeiT: Patch Embeddings, Self-Attention
+Tạo vector đặc trưng"]
+	D -> E [label="TrOCR: Self-Attention, Encoder-Decoder Attention
+Tạo các token văn bản"]
+	E -> F [label="Loại bỏ token đặc biệt, Định dạng văn bản"]
+}

@@ -1,0 +1,15 @@
+ImageTest\01.jpg	MH 13 CD 0096
+ImageTest\02.jpg	COOL
+ImageTest\03.jpg	OCtavia
+ImageTest\04.jpg	COLLEGE
+ImageTest\05.jpg	Mainline
+ImageTest\06.jpg	Solway Coast
+ImageTest\07.jpeg	GRAND
+ImageTest\08.jpg	IMAGE TO TEXT:
+ImageTest\09.jpg	KATINAT
+ImageTest\10.jpg	SURF
+ImageTest\11.jpg	Satitable
+ImageTest\12.jpg	FONT EFFECT
+ImageTest\13.jpg	PERMANENT PEACE
+ImageTest\14.jpg	W.B.MASON
+ImageTest\15.jpg	water position
